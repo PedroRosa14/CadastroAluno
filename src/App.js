@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { carregarAlunos, adicionarAluno, atualizarAluno, excluirAluno } from './services/localStorageService';  
+import { carregarAlunos, adicionarAluno, atualizarAluno } from './services/localStorageService';  
 import AlunoForm from './components/AlunoForm';
 import AlunoList from './components/AlunoList';
 import './styles/global.css';
