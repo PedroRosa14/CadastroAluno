@@ -36,7 +36,7 @@ const AlunoForm = ({ alunoSelecionado, onSalvar, onCancelar }) => {
 
     // Validação da idade
     if (!idade || idade <= 0) {
-      setErroIdade('A idade deve ser maior que 0.');
+      setErroIdade('A idade deve ser maior que 15.');
       valido = false;
     } else {
       setErroIdade('');
@@ -108,7 +108,7 @@ const AlunoForm = ({ alunoSelecionado, onSalvar, onCancelar }) => {
                 className={`form-control ${erroIdade ? 'is-invalid' : ''}`}
                 value={idade}
                 onChange={(e) => setIdade(e.target.value)}
-                min={0}
+                min={15}
                 required
               />
               {erroIdade && <div className="invalid-feedback">{erroIdade}</div>}
