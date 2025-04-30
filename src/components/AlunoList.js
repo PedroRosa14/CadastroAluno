@@ -4,8 +4,8 @@ import { excluirAluno } from '../services/localStorageService';
 const AlunoList = ({ alunos, onEditar, onExcluir }) => {
   const handleExcluir = (id) => {
     if (window.confirm('Tem certeza que deseja excluir este aluno?')) {
-      excluirAluno(id); // Exclui o aluno
-      onExcluir();  // Atualiza a lista de alunos após a exclusão
+      excluirAluno(id);
+      onExcluir();
     }
   };
 
@@ -14,7 +14,7 @@ const AlunoList = ({ alunos, onEditar, onExcluir }) => {
       <table className="table table-striped">
         <thead>
           <tr>
-            <th>ID</th>
+            {/* <th>ID</th> — Removido */}
             <th>Nome</th>
             <th>Idade</th>
             <th>Email</th>
@@ -26,14 +26,14 @@ const AlunoList = ({ alunos, onEditar, onExcluir }) => {
         <tbody>
           {alunos.length === 0 ? (
             <tr>
-              <td colSpan="7" className="text-center">
+              <td colSpan="6" className="text-center">
                 Nenhum aluno cadastrado
               </td>
             </tr>
           ) : (
             alunos.map((aluno) => (
               <tr key={aluno.id}>
-                <td>{aluno.id}</td>
+                {/* <td>{aluno.id}</td> — Removido */}
                 <td className="text-nowrap" style={{ maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                   {aluno.nome}
                 </td>
